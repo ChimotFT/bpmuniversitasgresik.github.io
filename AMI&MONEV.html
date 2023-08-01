@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BPM Universitas Gresik</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    text-align: center;
+    overflow-x: hidden;
+}
+.wrapper
+{
+    width: 90%;
+    margin: 0 auto;
+}
+header
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 80px;
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.05);
+    z-index: 100000;
+}
+header img
+{
+    align-items: left;
+    float: left;
+    height: 150px;
+    margin-left: -60px;
+    margin-top: -6px;
+}
+.group
+{
+    display: flex;
+    align-items: center;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+header ul li
+{
+    list-style: none;
+    margin-top: 13px;
+    font-size: 15px;
+}
+header ul li a 
+{
+position: relative;
+padding: 15px 10px;
+text-align: center;
+text-decoration: none;
+font-size: 14px;
+color: #333;
+text-transform: uppercase;
+}
+header .search
+{
+    margin-top: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 10;
+    cursor: pointer;
+}
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    margin-top: 15px;
+    min-width: 25%;
+    max-width: 60%;
+    min-height: 160px;
+    max-height: 260px;
+    text-align: center;
+    background: rgb(241, 233, 233) ;
+    position: absolute;
+    z-index: 10;
+    border-radius: 6px;
+    display: none;
+}
+ul li ul.dropdown2 li {
+    display: block;
+}
+
+ul li ul.dropdown2 {
+    margin-top: 15px;
+    min-width: 35%;
+    max-width: 70%;
+    height: 200px;
+    text-align: center;
+    background: rgb(241, 233, 233) ;
+    position: absolute;
+    z-index: 10;
+    border-radius: 6px;
+    display: none;
+}
+ul li ul.dropdown3 li {
+    display: block;
+}
+
+ul li ul.dropdown3 {
+    margin-top: 15px;
+    min-width: 40%;
+    max-width: 80%;
+    min-height: 270px;
+    text-align: center;
+    background: rgb(241, 233, 233) ;
+    position: absolute;
+    z-index: 10;
+    border-radius: 6px;
+    display: none;
+}
+ul li a:hover {
+    height: 100%;
+    background: rgb(0,0,0,0.1);
+    width: 30px;
+    border-radius: 6px;
+    transform: scale(1.03);
+    transition: all 0.6 ease;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+ul li:hover ul.dropdown2 {
+    display: block;
+}
+ul li:hover ul.dropdown3 {
+    display: block;
+}
+.banner-area
+{
+    top: -5%;
+    border-left: 20px solid #fff;
+    max-width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+.banner-area::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #130f40;
+    opacity: .3;
+    z-index: -1;
+}
+img{
+    max-width: 100%;
+}
+.banner-slide
+{
+    max-width: 100%;
+    display: flex;
+    animation: slide 30s infinite;
+}
+.banner-img
+{
+    max-width: 100%;
+    height: 850px;
+    display: flex;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+    125%{
+        transform: translateX(-300%);
+    }
+    130%{
+        transform: translateX(0%);
+    }
+    150%{
+        transform: translateX(0%);
+    }
+}
+
+.content-area
+{
+    max-width: 100%;
+    min-height: 3500px;
+    max-height: 9000px;
+    position: relative;
+    background: #fff;
+    top: 580px;
+}
+.content-area h2
+{
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 3px;
+}
+.content-area h3
+{
+    margin: 1% 0;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.content-area h4
+{
+    margin: 1% 0;
+    text-align: left;
+    padding-top: 5px;
+    letter-spacing: 1px;
+}
+.content-area p
+{
+    padding: -1% 0;
+    line-height: 30px;
+    text-align: left;
+}
+.spmi{
+    width: 800px;
+    align-items: center;
+}
+.searchBox
+{
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+.searchBox.active
+{
+    right: 0;
+}
+
+.searchBox input
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    color: #333;
+    font-size: 1.25em;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.searchBtn
+{
+    position: relative;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+.searchBtn.active
+{
+    left: 0;
+}
+.closeBtn
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    scale: 0;
+}
+.closeBtn.active
+{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+}
+.menuToggle
+{
+    position: relative;
+    display: none;
+}
+
+@media (max-width: 800px)
+{
+    .searchBtn
+    {
+        left: 0;
+    }
+    .menuToggle
+    {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    header .navigation
+    {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+    header.open .navigation
+    {
+        top: 80px;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        display:block;
+        flex-direction: column;
+        background: #fff;
+        width: 100%;
+        height: calc(100vh - 40px);
+        padding: 10px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    header.open .navigation li a
+    {
+        font-size: 1.03em;
+        padding: 12px;
+        line-height: 20px;
+    }
+    .hide
+    {
+        display: none;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+<div class="box-area">
+    <header>
+        <img src="logoo.png" class="logo">
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Profil.html">Profile</a></li>
+                <li>
+                    <a href="SPMI.html">SPMI</a>
+                    <ul class="dropdown">
+                        <li><a href="KebijakanSPMI.html">Kebijakan SPMI</a></li>
+                        <li><a href="ManualSPMI.html">Manual SPMI</a></li>
+                        <li><a href="StandarSPMI.html">Standar SPMI</a></li>
+                        <li><a href="FormulirSPMI.html">Formulir SPMI</a></li>
+                    </ul>
+                </li>
+                <li><a href="AMI&MONEV.html">AMI & MONEV</a></li>
+                <li>
+                    <a href="Kurikulum&Akreditasi.html">KURIKULUM & AKREDITASI</a>
+                    <ul class="dropdown2">
+                        <li><a href="AkreditasiInstitusi.html">Akreditasi Institusi</a></li>
+                        <li><a href="AkreditasiProgramStudi.html">Akreditasi Program Studi</a></li>
+                        <li><a href="ProgramStudi.html">Program Studi</a></li>
+                        <li><a href="PedomanKurikulum.html">Pedoman Kurikulum</a></li>
+                        <li><a href="Download.html">Download</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="Kuesioner.html">Kuesioner</a>
+                    <ul class="dropdown3">
+                        <li><a href="Kuesioner1.html">Kinerja Dosen</a></li>
+                        <li><a href="Kuesioner2.html">Kepuasan Dosen terhadap Pelayanan Akademik</a></li>
+                        <li><a href="Kuesioner3.html">Kepuasan MAHASISWA terhadap Pelayanan Akademik </a></li>
+                        <li><a href="Kuesioner4.html">Kepuasan Tenaga Kependidikan terhadap Pelayanan Akademik</a></li>
+                        <li><a href="Kuesioner5.html">TRACER Studi Alumni</a></li>
+                    </ul>
+                </li>
+                <li><a href="InfoKunjungan.html">INFO KUNJUNGAN</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search-outline" 
+                    class="searchBtn"></ion-icon>
+                    <ion-icon name="close-outline" 
+                    class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search here . . .">
+        </div>
+    </header>
+
+    <div class="banner-area">
+        <div class="banner-slide">
+            <div class="banner-img">
+                <img src="background.jpeg">
+                <img src="1.png">
+                <img src="3.png">
+                <img src="6.png">
+            </div>
+        </div>
+    </div>
+    <div class="content-area">
+        <div class="wrapper">
+            <h2> Audit Mutu Internal (AMI)</h2>
+            <p>
+                    Sistem Penjaminan mutu Internal ( SPMI ) adalah kegiatan sistemik Penjaminan Mutu untuk mengawasi Penyelenggaraan Pendidikan Tinggi oleh Universitas Gresik  (Internally driven ) secara berkelanjutan (continuous improvement ).</p>
+            <h3>A. Pengertian Audit Mutu Internal (AMI)</h3> 
+            <p style="text-indent: 20px;">Universitas Gresik dalam rangka untuk memenuhi kepuasan pelanggan  (Costumers,  Stakeholders ) dan menghasilkan lulusan yang kompeten sesuai dengan kualifikasi serta dalam rangka menjamin mutu secara berkelanjutan, maka dilakukan peningkatan kualitas secara   terus menerus  melalui  suatu siklus Penetapan, Pelaksanaan, Evaluasi , Pengendalian  dan Peningkatan  (PPEPP ) Standar Pendidikan Tinggi.</p>
+            <p style="text-indent: 20px;">Evaluasi adalah bagian dari siklus implementasi PPEPP, Evaluasi Pelaksanaan Standar Pendidikan Tinggi dilakukan untuk mengukur tingkat kesesuaian antara penyelenggaraan pendidikan Tinggi dengan Standar Pendidikan Tinggi. Oleh karena itu, evaluasi dilakukan terhadap pelaksanaan semua standar pendidikan tinggi melalui AMI (audit mutu internal ) sesuai dengan Permenristekdikti no 62 tahun 2016 pasal 5 tentang sistem penjaminan mutu perguruan tinggi.</p> 
+            <p style="text-indent: 20px;">Audit Mutu Internal (AMI ) adalah proses pengujian yang sistematik, mandiri, dan terdokumentasi untuk memastikan pelaksanaan kegiatan di Perguruan Tinggi sesuai prosedur dan hasilnya telah sesuai dengan standar untuk mencapai tujuan institusi.
+            AMI merupakan audit yang dilakukan untuk menentukan tingkat kesesuaian pelaksanaan kegiatan terhadap standar mutu, peraturan, prosedur, instruksi kerja, dalam rangka peningkatan institusi dan mengurangi resiko ketidaktercapaian standar/ penurunan kualitas.</p>
+            <h3>B. Tujuan AMI</h3>
+            <p>Adapun dilaksanakannya Audit Mutu Internal ( AMI ) mempunyai tujuan membantu seluruh anggota unit pelaksana akademik dalam melaksanakan tugas untuk mencapai sasaran akademik yang ditetapkan secara efektif, efisien  dan bertanggung jawab.</p>
+            <h4>~ Tujuan Umum : </h4>
+            <p>Secara Umum AMI juga bertujuan melaksanakan verifikasi kesesuaian antara pelaksanaan dengan Standar Pendidikan Tinggi yang telah ditetapkan dalam rangka peningkatan Mutu.</p>
+            <h4>~ Tujuan Khusus : </h4>
+            <p style="text-indent: 25px;">1. Memeriksa kesesuaian atau ketidaksesuaian unsur–unsur sistem mutu dengan standar yang telah ditetapkan.</p>
+            <p style="text-indent: 25px;">2. Memeriksa proses dan hasil proses pencapaian mutu sehingga dapat ditentukan kefektifan pencapaian dari tujuan yang telah ditetapkan.</p>
+            <p style="text-indent: 25px;">3. Untuk menyiapkan laporan kepada teraudit (auditee) sebagai dasar perbaikan mutu selanjutnya.</p>
+            <p style="text-indent: 25px;">4. Untuk memberi kesempatan teraudit memperbaiki sistem penjaminan mutu.</p>
+            <p style="text-indent: 25px;">5. Memastikan bahwa tujuan dan sasaran dari unit / program yang telah ditetapkan.</p>
+            <p style="text-indent: 25px;">6. Mengidentifikasi ruang perbaikan sehingga bisa dibuat saran untuk peningkatan kualitas dimasa mendatang.</p>
+            <h3> C.Manfaat AMI </h3>
+            <p style="text-indent: 20px;">Manfaat yang diperoleh secara langsung diadakannya AMI adalah didapatkannya rekomendasi peningkatan mutu Perguruan Tinggi, Fakultas dan Program Studi  serta unit-unit yang ada di lingkungan Universitas Gresik.  Rekomendasi tersebut akan bermanfaat bagi Pimpinan perguruan tinggi dalam mengembangkan berbagai program untuk mencapai Visi  dan tujuan Perguruan Tinggi, Fakultas ataupun Program studi.</p>
+            <p style="text-indent: 20px;">Audit  Mutu Internal  ( AMI ) merupakan salah satu upaya untuk peningkatan mutu dan pengembangan institusi serta untuk mengetahui kesesuaian standar dengan pelaksanaan yang telah dilakukan pada berbagai aspek yang ditetapkan dalam lingkup AMI.</p>
+            <h3>D. Ruang Lingkup AMI</h3>
+            <p style="text-indent: 20px;">Adapun ruang lingkup Audit Mutu Internal (AMI) dilingkungan Universitas Gresik adalah sesuai dengan Standar Pendidikan Tinggi  yang telah ditetapkan yaitu pada bidang  Pendidikan, Penelitian dan Pengabdian Masyarakat serta bidang lainnya yang diselaraskan dengan standar mutu  Universitas Gresik yaitu standar pendidikan, standar penelitian, dan standar pengabdian masyarakat dan bidang non akademik.</p>
+            <h3>E. Sasaran Audit Mutu Internal (AMI)</h3>
+            <p>Berdasarkan manfaat yang dapat diberikan oleh pelaksanaan AMI yang baik dan profesional, maka sasaran utama dari AMI adalah;</p>
+            <p style="text-indent: 25px;">1.Terbentuknya sistem tata kelola organisisi yang handal dan terpercaya (Good University Governance)</p>
+            <p style="text-indent: 25px;">2.Tercapai dan terlampauinya setiap standar mutu yang telah ditetapkan baik standar mutu bidang akademik maupun non akademik secara kontinus </p>
+            <p style="text-indent: 40px;">(continous improvement)</p>
+            <p style="text-indent: 25px;">3.Terciptanya budaya mutu di setiap aktivitas civitas akademika Universitas Gresik </p>
+            <p style="text-indent: 25px;">4.Terakselarasinya pemenuhan indikator-indikator akreditasi perguruan tinggi baik akreditasi nasional maupun internasional</p>
+            <p style="text-indent: 25px;">5.Terbentuknya kerangka kerja yang tersetruktur untuk pencapaian VISI dan MISI institusi secara maksimal.</p>
+            <p style="text-indent: 25px;">6.Terbangunnya penyusunan program kerja dan pembiayaan yang tepat sasaran</p>
+            <p style="text-indent: 25px;">7.Terbentuknya program studi dan unit-unit yang handal dan berkemajuan</p>
+            <p style="text-indent: 25px;">8.Tercapainya pengakuan perguruan tinggi di tingkat regional maupun global</p>
+
+            <h2>Monitoring & Evaluasi (MONEV)</h2>
+            <p style="text-indent: 40px;">Peran Sistem Penjaminan Mutu Internal (SPMI) adalah kegiatan sistemik penjaminan mutu pendidikan tinggi di perguruan tinggi oleh perguruan tinggi, untuk mengawasi penyelenggaraan pendidikan tinggi oleh perguruan tinggi secara berkelanjutan. SPMI bersifat mandiri (internal driven), tanpa campur tangan pemerintah serta dilakukan berkelanjutan. Sedangkan Mutu perguruan tinggi adalah kesesuaian antara penyelenggaraan perguruan tinggi dengan Standar Nasional Pendidikan (SNP), maupun standar yang ditetapkan oleh perguruan tinggi berdasarkan visi dan kebutuhan dari para pihak yang berkepentingan (stakeholders). Sebagai kelengkapan dalam pelaksanaan monev di lingkungan Universitas Gresik ini, maka disusunlah pedoman pelaksanaan monev yang merupakan acuan bagi pelaksanaan kegiatan monev di setiap unit kerja.</p>
+            <h3>Dasar Hukum </h3>
+            <p>Adapun dasar hukum pelaksanaan monitoring dan evaluasi dalam penyelenggaraan Tri Dharma Perguruan Tinggi sebagai berikut :</p>
+            <p style="text-indent: 25px;">1. Undang-Undang Republik Indonesia Nomor 20 tahun 2003 tentang Sistem Pendidikan Nasional;</p>
+            <p style="text-indent: 25px;">2. Undang-Undang Republik Indonesia Nomor 12 tahun 2012 tentang Pendidikan Tinggi;</p>
+            <p style="text-indent: 25px;">3. Peraturan Menteri Riset Teknologi dan Pendidikan Tinggi Nomor 44 tahun 2015 tentang Standar Nasional Pendidikan Tinggi;</p> 
+            <p style="text-indent: 25px;">4. Statuta Universitas Gresik </p>
+            <p style="text-indent: 25px;">5. Renstra Universitas Gresik tahun 2016-2020</p>
+            <p style="text-indent: 25px;">6. Peraturan Rektor no 074 / 2019 tentang Standar SPMI Universitas Gresik </p>
+            <h3>Tujuan </h3>
+            <p>Adapun tujuan dari pelaksanaan monev ini antara lain : </p>
+            <p style="text-indent: 25px;">1.Memonitoring kesesuaian dan ketercapaian target dari masing- masing kegiatan program kerja.</p>
+            <p style="text-indent: 25px;">2.Mengevaluasi temuan hasil monev dalam upaya pengendalian dan peningkatan kualitas. </p>
+            <p style="text-indent: 25px;">3.Menindaklanjuti temuan dalam mengendalikan dan meningkatkan kualitas proses pembelajaran.</p>
+            <h3>Ruang Lingkup </h3>
+            <h4>1. Sistem penjaminan Mutu Internal terdiri dari Kebijakan, Standar, Manual dan Folmulir SPMI. (terlampir)</h4>
+            <h4>2. Bidang Akademik</h4>
+            <p style="text-indent: 10px;"><b>a. Monev Pendidikan; terdiri dari</b></p> 
+                <p style="text-indent: 25px;">1)Monev Kurikulum; adalah monitoring dan evaluasi yang dilaksankan setahun sekali. Dan</p>
+                <p style="text-indent: 25px;">2)Monev Pembelajaran; adalah monitoring dan evaluasi yang dilaksanakan di pertengahan semester dan</p>
+                <p style="text-indent: 25px;">3)Akhir semester untuk masing-masing semester ganjil dan semester genap adalah monev Perkuliahan. Serta monitoring dan evaluasi Kinerja Dosen, dilaksanakan setiap semester.</p>
+                <p style="text-indent: 25px;">4)Monev Tugas Akhir Mahasiswa dilaksankan Persemester tediri dari monitoring dan evaluasi prososal serta Skripsi sekali</p>
+            <p style="text-indent: 10px;"><b>b. Monev Penelitian; adalah monitoring dan evaluasi yang dilaksanakan setiap tahunnya</b></p>
+            <p style="text-indent: 10px;"><b>c. Monev Pengabdian Masyarakat; adalah monitoring dan evaluasi yang dilaksankan disetiap tahunnya</b></p>
+            <h4>3. Bidang Non Akademik</h4> 
+            <p style="text-indent: 25px;">a). Monev Visi Misi; adalah monitoring dan evaluasi visi keilmuan Program studi yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">b). Monev Tata Pamong; adalah monitoring dan evaluasi tata pamong program sarjana dan program pascasarjana atau dapat dikatakan monitoring dan evaluasi di</p>
+                <p style="text-indent: 40px;">tingkat fakultas, yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">c). Monev Sasaran Mutu; adalah monitoring dan evaluasi di tingkat fakultas atau pun program studi baik program sarjana maupun program pascasarjana yang</p>
+                <p style="text-indent: 40px;">dilaksanakan setahun sekali.</p>
+                <p style="text-indent: 25px;">d). Monev Rencana Strategi; yaitu monitoring dan evaluasi  yang dilaksanakan setahun sekali.</p>
+                <p style="text-indent: 25px;">e). Monev Kerjasama; Terdiri dari Monitoring dan evaluasi kepuasan Mitra Kerjasama serta monitoring dan evaluasi mitra Kerjasama yang dilaksanakan</p>
+                <p style="text-indent: 40px;">setiap satu tahun sekali.</p>
+                <p style="text-indent: 25px;">f). Monev Kemahasiswaan; Terdiri dari Monitoring dan evaluasi kepuasan mahasiswa terhadap layanan akademik, Tracer Study dan Stakeholder yang</p>
+                <p style="text-indent: 40px;">dilaksanakan setiap satu tahun sekali. Serta Monev Pencarian Mahasiswa Baru (PMB) yang dilaksanakan setiap tahun sekali.</p>
+                <p style="text-indent: 25px;">g). Monev kepegawaian; Terdiri dari Kepuasan dosen dan tenaga kependidikan terhadap layanan akademik yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">h). Monev keuangan; adalah monitoring dan evaluasi kesesuaian ketercapaian standar keuangan yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">i). Monev Sarana dan Prasarana; adalah monitoring dan evaluasi sarana dan prasarana yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">j). Monev Puskom; adalah monitoring dan evaluasi yang yang dilaksanakan setahun sekali</p>
+                <p style="text-indent: 25px;">k). Monev perpustakaan; adalah monitoring dan evaluasi yang yang dilaksanakan setahun sekali</p>
+            <h3>Sasaran </h3>
+            <p>Sasaran monev adalah seluruh unit kerja dilingkungan Universitas Gresik yang terdiri dari 
+                fakultas, program pascasarjana, lembaga, LPPM, BPM, BAAK, Humas, IT, kepegawaian , 
+                keuangan, sarana prasarana dan perpustakaan</p><br></br><br></br>
+            <hr />
+            <footer>
+                <div>&copy; Badan Penjaminan Mutu Universitas Gresik </div>
+            </footer>
+        </div>
+    </div>
+
+</div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let searchBtn = document.querySelector('.searchBtn');
+        let closeBtn = document.querySelector('.closeBtn');
+        let searchBox = document.querySelector('.searchBox');
+        let navigation = document.querySelector('.navigation');
+        let menuToggle = document.querySelector('.menuToggle');
+        let header = document.querySelector('header');
+
+        searchBtn.onclick =function(){
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');
+            searchBtn.classList.add('active');
+            menuToggle.classList.add('hide');
+            header.classList.remove('open');
+        }
+        closeBtn.onclick =function(){
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+        }
+        menuToggle.onclick = function(){
+            header.classList.toggle('open');
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
